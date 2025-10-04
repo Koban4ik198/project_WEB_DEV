@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <link rel="stylesheet" href="../styles/style.css"/>
+    <link rel="icon" href="../png/logo.png"/>
+</head>
+<body>
+    <a href="../index.html" class="btn" style="position: fixed; top: 20px; right: 20px;">Назад</a>
+    <div class="container" style="display: flex; justify-content: center; align-items: center; height: 100vh;">
+        <div class="login-form" style="background: linear-gradient(135deg, #d9c4a7cc 0%, #bfa67acc 100%); padding: 40px; border-radius: 20px; color: #5a3e1b; max-width: 400px; width: 100%; text-align: center;">
+            <div class="toggle-buttons" style="margin-bottom: 20px;">
+                <button id="register-toggle" class="toggle-btn" style="background: rgba(0,0,0,0.1); color: #5a3e1b; border: none; padding: 10px 20px; border-radius: 20px; margin-right: 10px; cursor: pointer;">Регистрация</button>
+                <button id="login-toggle" class="toggle-btn active" style="background: #bfa67a; color: #5a3e1b; border: none; padding: 10px 20px; border-radius: 20px; cursor: pointer;">Войти</button>
+            </div>
+            
+            <!-- Форма входа -->
+            <div id="login-form" class="form-section">
+                <h2 style="margin-bottom: 20px;">Вход</h2>
+                <form id="loginForm">
+                    <div style="margin-bottom: 15px;">
+                        <input type="email" id="login-email" placeholder="Email" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;" required>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <input type="password" id="login-password" placeholder="Пароль" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;" required>
+                    </div>
+                    <button type="submit" class="btn" style="border: none;">Войти</button>
+                </form>
+                <div id="login-message" style="margin-top: 15px; color: red;"></div>
+            </div>
+
+            <!-- Форма регистрации -->
+            <div id="register-form" class="form-section" style="display: none;">
+                <h2 style="margin-bottom: 20px;">Регистрация</h2>
+                <form id="registerForm">
+                    <div style="margin-bottom: 15px;">
+                        <input type="text" id="register-name" placeholder="Имя" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;" required>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="email" id="register-email" placeholder="Email" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;" required>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <input type="password" id="register-password" placeholder="Пароль" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;" required>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <input type="password" id="register-confirm-password" placeholder="Подтвердите пароль" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;" required>
+                    </div>
+                    <button type="submit" class="btn" style="border: none;">Зарегистрироваться</button>
+                </form>
+                <div id="register-message" style="margin-top: 15px; color: red;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подключаем Firebase и логику входа -->
+    <script type="module" src="../js/loginpage.js"></script>
+    
+</body>
+</html>

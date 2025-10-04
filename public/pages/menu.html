@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Меню - Пирожки от Дяди Бори</title>
+    <link rel="stylesheet" href="../styles/style.css"/>
+    <link rel="icon" href="../png/logo.png"/>
+</head>
+<body>
+    <a href="../index.html" class="btn" style="position: fixed; top: 20px; right: 20px;">Назад</a>
+    <!-- Header (same as home.html) -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../png/logo.png" alt="Логотип Пирожки от Дяди Бори" />
+                    <div class="logo-text">Пирожки от Дяди Бори</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="menu.html" class="active">Меню</a></li>
+                        <li><a href="../index.html">Акции</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="feedback.html">Обратная связь</a></li>
+            </ul>
+        </nav>
+        <div class="phone">+7 (383) 227-87-00</div>
+        <div id="user-profile" style="display: none; align-items: center; gap: 10px;">
+        <i class="fas fa-user" style="color: #5a3e1b;"></i>
+        <span id="user-name" style="color: #5a3e1b; font-weight: bold;"></span>
+</div>
+<button id="auth-btn" class="btn">Вход</button>
+    </header>
+
+   <!-- Menu Section -->
+<section class="menu" style="padding: 100px 20px 60px; background: #f7f1e1; min-height: 80vh;">
+    <div class="container">
+        <h2 style="color: #8b4513; margin-bottom: 40px; text-align: center;">Наше меню</h2>
+        <div id="menu-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px;">
+            <!-- Сюда автоматически вставятся блюда из базы -->
+            <div style="text-align: center; color: #8b4513; grid-column: 1 / -1;">
+                Загрузка меню...
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>+7 (383) 227-87-00</p>
+                    <p>07:00 – 29:00, без выходных</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Адрес</h3>
+                    <p>г. Новосибирск, ул. Примерная, 123</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <p>Instagram: @mashenkiny_pirogi</p>
+                    <p>VK: vk.com/mashenkiny_pirogi</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Машенькины пироги. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Подключаем скрипты -->
+     <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/menu.js"></script>
+</body>
+</html>

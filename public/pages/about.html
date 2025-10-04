@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>О нас - Пирожки от Дяди Бори</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../styles/style.css"/>
+    <link rel="icon" href="../png/logo.png"/>
+</head>
+<body>
+    <a href="../index.html" class="btn" style="position: fixed; top: 20px; right: 20px;">Назад</a>
+    <!-- Header (same as home.html) -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="../png/logo.png" alt="Логотип Пирожки от Дяди Бори" />
+                    <div class="logo-text">Пирожки от Дяди Бори</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="../index.html#promo-banner">Акции</a></li>
+                        <li><a href="about.html" class="active">О нас</a></li>
+                        <li><a href="feedback.html">Обратная связь</a></li>
+            </ul>
+        </nav>
+        <div class="phone">+7 (383) 227-87-00</div>
+        <div id="user-profile" style="display: none; align-items: center; gap: 10px;">
+        <i class="fas fa-user" style="color: #5a3e1b;"></i>
+        <span id="user-name" style="color: #5a3e1b; font-weight: bold;"></span>
+</div>
+<button id="auth-btn" class="btn">Вход</button>
+    </header>
+
+   <!-- About Us Section -->
+<section id="about-us" style="background: #f7f1e1; padding: 60px 0;">
+    <div class="container" style="display: flex; align-items: center; gap: 40px;">
+        <div style="flex: 1; max-width: 50%;">
+            <h2 style="color: #8b4513; margin-bottom: 20px;">О нас</h2>
+            <p style="color: #5a3e1b; font-size: 18px; line-height: 1.6;">
+                Мы — семейная пекарня «Пирожки от Дяди Бори» с более чем 15-летним опытом. 
+Начав с маленькой домашней кухни, мы выросли в любимое место горожан, 
+где каждый пирожок готовится с душой и по старинным семейным рецептам, 
+передающимся из поколения в поколение.
+            </p>
+        </div>
+        <div style="flex: 1; text-align: center;">
+            <img src="../png/aboutus.jpg" alt="О нас" style="max-width: 100%; height: auto; border-radius: 10px;">
+        </div>
+    </div>
+</section>
+
+<section id="about-us" style="background: #f7f1e1; padding: 60px 0;">
+    <div class="container" style="display: flex; align-items: center; gap: 40px;">
+        <div style="flex: 1; text-align: center;">
+            <img src="https://i.pinimg.com/originals/ea/90/fc/ea90fcf6e1b32a985f1dd2a589a7da92.jpg" alt="О нас" style="max-width: 100%; height: auto; border-radius: 10px;">
+        </div>
+        <div style="flex: 1; max-width: 50%;">
+            <h2 style="color: #8b4513; margin-bottom: 20px;">История</h2>
+            <p style="color: #5a3e1b; font-size: 18px; line-height: 1.6;">
+                Секрет нашего успеха — в бережном отношении к традициям и использовании 
+только натуральных продуктов. Мука от проверенных поставщиков, 
+свежее фермерское мясо, овощи с местных рынков — мы тщательно 
+отбираем каждый ингредиент, чтобы вы почувствовали настоящий домашний вкус, 
+как в детстве у бабушки.
+            </p>
+        </div>
+        
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>+7 (383) 227-87-00</p>
+                    <p>07:00 – 29:00, без выходных</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Адрес</h3>
+                    <p>г. Новосибирск, ул. Примерная, 123</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <p>Instagram: @mashenkiny_pirogi</p>
+                    <p>VK: vk.com/mashenkiny_pirogi</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Машенькины пироги. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+    <!-- Подключаем скрипты -->
+     <script type="module" src="../js/auth-manager.js"></script>
+     <script type="module" src="../js/main.js"></script>
+</body>
+</html>

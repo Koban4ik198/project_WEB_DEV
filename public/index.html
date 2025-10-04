@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Пирожки от Дяди Бори - Главная</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles/style.css"/>
+    <link rel="icon" href="png/logo.png"/>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="png/logo.png" alt="Логотип Пирожки от Дяди Бори">
+                    <div class="logo-text">Пирожки от Дяди Бори</div>
+                </div>
+                <nav>
+                    <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="pages/menu.html">Меню</a></li>
+                <li><a href="#promo-banner">Акции</a></li>
+                <li><a href="pages/about.html">О нас</a></li>
+                <li><a href="pages/feedback.html">Обратная связь</a></li>
+                <li><a href="pages/acountaud.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+        <span id="user-greeting" style="color: #5a3e1b; margin-right: 10px; display: none;"></span>
+        <button id="auth-btn" class="btn">Вход</button>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section class="hero">
+        <div class="carousel">
+            <div class="carousel-slides">
+                <div class="carousel-slide active">
+                    <div class="slide-content">
+                        <h1>Вкуснейшие пироги от Дяди Бори</h1>
+                        <p>Натуральные ингредиенты, домашний вкус</p>
+                        <a href="#" class="btn">Заказать сейчас</a>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <h1>Скидка 50% на первый заказ</h1>
+                        <p>Введите промокод: ПЕРВЫЙ</p>
+                        <a href="#" class="btn">Получить скидку</a>
+                    </div>
+                </div>
+                <div class="carousel-slide">
+                    <div class="slide-content">
+                        <h1>Бесплатная доставка</h1>
+                        <p>При заказе от 1500 рублей</p>
+                        <a href="#" class="btn">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-nav">
+                <button class="carousel-nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+                <button class="carousel-nav-btn next"><i class="fas fa-chevron-right"></i></button>
+            </div>
+            <div class="carousel-controls">
+                <div class="carousel-dot active"></div>
+                <div class="carousel-dot"></div>
+                <div class="carousel-dot"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promo Banner -->
+    <section id="promo-banner" class="promo-banner">
+        <div class="container">
+            <div class="promo-grid">
+                <div class="promo-item">
+                    <div class="promo-percent">50%</div>
+                    <p class="promo-text">при первом заказе:*</p>
+
+                    <div class="promo-code">
+                        <span class="promo-label">ПРОМОКОД:</span>
+                        <span class="code">ПЕРВЫЙ</span>
+                    </div>
+                </div>
+
+                <div class="promo-item">
+                    <div class="promo-percent">30%</div>
+                    <p class="promo-text">на 2 пиццы:*</p>
+
+                    <div class="promo-code">
+                        <span class="promo-label">ПРИ ЗАКАЗЕ ОТ</span>
+                        <span class="code">1500 РУБЛЕЙ</span>
+                    </div>
+                </div>
+
+                <div class="promo-item">
+                    <div class="promo-percent">10%</div>
+                    <p class="promo-text">на пирожки:*</p>
+
+                    <div class="promo-code">
+                        <span class="promo-label">ПРИ ЗАКАЗЕ ОТ</span>
+                        <span class="code">5 пирогов</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="order-btn">
+                <span>Заказать</span>
+                <p class="phone_ban">+7 (383) 227-87-00</p>
+                <p class="hours">07:00 – 29:00, без выходных</p>
+            </button>
+
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-star"></i></div>
+                    <h3>Качественные продукты</h3>
+                    <p>Используем только свежие и натуральные ингредиенты</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Быстрая доставка</h3>
+                    <p>Доставляем заказы в течение часа по городу</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-medal"></i></div>
+                    <h3>Проверенный вкус</h3>
+                    <p>7 лет радуем наших клиентов вкуснейшей выпечкой</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>+7 (383) 227-87-00</p>
+                    <p>07:00 – 29:00, без выходных</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Адрес</h3>
+                    <p>г. Новосибирск, ул. Примерная, 123</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <p>Instagram: @mashenkiny_pirogi</p>
+                    <p>VK: vk.com/mashenkiny_pirogi</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Машенькины пироги. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="js/auth-manager.js"></script>
+    <script type="module" src="js/main.js"></script>
+    <script src="js/carusel.js"></script>
+</body>
+</html>

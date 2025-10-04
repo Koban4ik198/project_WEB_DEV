@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Личный кабинет - Пирожки от Дяди Бори</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles/style.css"/>
+    <link rel="icon" href="/png/logo.png"/>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="/png/logo.png" alt="Логотип Пирожки от Дяди Бори">
+                    <div class="logo-text">Пирожки от Дяди Бори</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">Главная</a></li>
+                        <li><a href="/pages/menu.html">Меню</a></li>
+                        <li><a href="/index.html#promo-banner">Акции</a></li>
+                        <li><a href="/index.html#about-us">О нас</a></li>
+                        <li><a href="/pages/feedback.html">Обратная связь</a></li>
+                    </ul>
+                </nav>
+                <div class="phone">+7 (383) 227-87-00</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Account Section -->
+    <section class="account-section" style="padding: 120px 0; background: #f7f1e1;">
+        <div class="container">
+            <div class="account-container" style="max-width: 800px; margin: 0 auto; background: linear-gradient(135deg, #d9c4a7cc 0%, #bfa67acc 100%); border-radius: 20px; padding: 40px; color: #5a3e1b;">
+                <h1 style="text-align: center; margin-bottom: 30px; color: #8b4513;">Личный кабинет</h1>
+
+                <div id="user-info" style="display: none;">
+                    <div class="user-details" style="margin-bottom: 30px;">
+                        <h2 style="margin-bottom: 20px; color: #8b4513;">Информация о пользователе</h2>
+                        <div class="info-item" style="margin-bottom: 15px;">
+                            <strong>Имя:</strong> <span id="user-name"></span>
+                        </div>
+                        <div class="info-item" style="margin-bottom: 15px;">
+                            <strong>Email:</strong> <span id="user-email"></span>
+                        </div>
+                        <div class="info-item" style="margin-bottom: 15px;">
+                            <strong>Дата регистрации:</strong> <span id="user-reg-date"></span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Любимые пироги:</strong> <span id="user-favorites"></span>
+                        </div>
+                    </div>
+
+                    <div class="account-actions" style="text-align: center;">
+                        <button id="logout-btn" class="btn" style="margin-right: 20px;">Выйти</button>
+                        <a href="/index.html" class="btn">На главную</a>
+                    </div>
+                </div>
+
+                <div id="loading" style="text-align: center;">
+                    <p>Загрузка...</p>
+                </div>
+
+                <div id="not-logged-in" style="text-align: center; display: none;">
+                    <p>Вы не авторизованы. <a href="/pages/login.html">Войти</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>+7 (383) 227-87-00</p>
+                    <p>07:00 – 29:00, без выходных</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Адрес</h3>
+                    <p>г. Новосибирск, ул. Примерная, 123</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <p>Instagram: @mashenkiny_pirogi</p>
+                    <p>VK: vk.com/mashenkiny_pirogi</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Машенькины пироги. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module">
+        import { checkAuthState, logout } from '/js/auth-manager.js';
+        import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
+
+        const database = getDatabase();
+
+        const userInfo = document.getElementById('user-info');
+        const loading = document.getElementById('loading');
+        const notLoggedIn = document.getElementById('not-logged-in');
+        const userName = document.getElementById('user-name');
+        const userEmail = document.getElementById('user-email');
+        const userRegDate = document.getElementById('user-reg-date');
+        const userFavorites = document.getElementById('user-favorites');
+        const logoutBtn = document.getElementById('logout-btn');
+
+        async function loadUserData() {
+            const user = await checkAuthState();
+            if (user) {
+                try {
+                    const userRef = ref(database, 'users/' + user.uid);
+                    const snapshot = await get(userRef);
+
+                    if (snapshot.exists()) {
+                        const userData = snapshot.val();
+                        userName.textContent = userData.name || 'Не указано';
+                        userEmail.textContent = user.email;
+                        userRegDate.textContent = new Date(userData.registrationDate).toLocaleDateString('ru-RU');
+                        userFavorites.textContent = userData.favoritePies && userData.favoritePies.length > 0 ? userData.favoritePies.join(', ') : 'Нет любимых пирогов';
+                    } else {
+                        userName.textContent = user.email.split('@')[0];
+                        userEmail.textContent = user.email;
+                        userRegDate.textContent = 'Неизвестно';
+                        userFavorites.textContent = 'Нет данных';
+                    }
+
+                    userInfo.style.display = 'block';
+                    loading.style.display = 'none';
+                } catch (error) {
+                    console.error('Ошибка загрузки данных пользователя:', error);
+                    userInfo.style.display = 'block';
+                    loading.style.display = 'none';
+                }
+            } else {
+                loading.style.display = 'none';
+                notLoggedIn.style.display = 'block';
+            }
+        }
+
+        logoutBtn.addEventListener('click', async () => {
+            await logout();
+            window.location.href = '/index.html';
+        });
+
+        loadUserData();
+    </script>
+</body>
+</html>

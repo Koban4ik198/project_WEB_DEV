@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обратная связь - Пирожки от Дяди Бори</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/styles/style.css"/>
+    <link rel="icon" href="/png/logo.png"/>
+</head>
+<body style="min-height: 100vh; display: flex; flex-direction: column;">
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="/png/logo.png" alt="Логотип Пирожки от Дяди Бори">
+                    <div class="logo-text">Пирожки от Дяди Бори</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="/index.html">Главная</a></li>
+                        <li><a href="/pages/menu.html">Меню</a></li>
+                        <li><a href="#promo-banner">Акции</a></li>
+                        <li><a href="#about-us">О нас</a></li>
+                        <li><a href="/pages/feedback.html">Обратная связь</a></li>
+                    </ul>
+                </nav>
+                <div class="phone">+7 (383) 227-87-00</div>
+                <a href="/pages/login.html" class="btn">Вход</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Feedback Section -->
+    <main style="flex: 1; padding: 100px 20px; background: #f7f1e1;">
+        <div class="container">
+            <h1 style="color: #8b4513; text-align: center; margin-bottom: 40px;">Обратная связь</h1>
+            <div class="feedback-form" style="max-width: 600px; margin: 0 auto; background: linear-gradient(135deg, #d9c4a7cc 0%, #bfa67acc 100%); padding: 40px; border-radius: 20px; color: #5a3e1b;">
+                <form>
+                    <div style="margin-bottom: 20px;">
+                        <label for="name" style="display: block; margin-bottom: 5px; font-weight: bold;">ФИО</label>
+                        <input type="text" id="name" name="name" placeholder="Ваше полное имя" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;" required>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="email" style="display: block; margin-bottom: 5px; font-weight: bold;">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Ваш email" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;" required>
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="subject" style="display: block; margin-bottom: 5px; font-weight: bold;">Тема</label>
+                        <select id="subject" name="subject" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px;" required>
+                            <option value="">Выберите тему</option>
+                            <option value="complaint">Жалоба</option>
+                            <option value="suggestion">Предложение</option>
+                            <option value="question">Вопрос</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom: 30px;">
+                        <label for="message" style="display: block; margin-bottom: 5px; font-weight: bold;">Сообщение</label>
+                        <textarea id="message" name="message" placeholder="Опишите ваше сообщение или жалобу" rows="6" style="width: 100%; padding: 10px; border: none; border-radius: 5px; font-size: 16px; resize: vertical;" required></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%;">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>+7 (383) 227-87-00</p>
+                    <p>07:00 – 29:00, без выходных</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Адрес</h3>
+                    <p>г. Новосибирск, ул. Примерная, 123</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Мы в соцсетях</h3>
+                    <p>Instagram: @mashenkiny_pirogi</p>
+                    <p>VK: vk.com/mashenkiny_pirogi</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Машенькины пироги. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/js/auth-manager.js"></script>
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>

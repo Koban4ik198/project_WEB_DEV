@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Allow: /index.html
+Allow: /pages/menu.html
+Allow: /pages/feedback.html
+Allow: /pages/login.html
+Allow: /pages/about.html
+
+Disallow: /js/
+Disallow: /templates/
+Disallow: /png/
