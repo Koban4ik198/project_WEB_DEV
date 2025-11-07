@@ -96,7 +96,7 @@ loginFormElement.addEventListener('submit', async (e) => {
         
         // Перенаправляем на главную страницу через 1 секунду
         setTimeout(() => {
-            window.location.href = '/index.html';
+            window.location.href = '../index.html';
         }, 1000);
         
     } catch (error) {

@@ -43,7 +43,7 @@ async function updateAuthUI() {
 
 function handleLogin(e) {
     e.preventDefault();
-    window.location.href = '/pages/login.html';
+    window.location.href = 'pages/login.html';
 }
 
 async function handleLogout(e) {

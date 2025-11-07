@@ -15,7 +15,7 @@
     <meta property="og:site_name" content="Пирожки от Дяди Бори">
     <meta property="og:locale" content="ru_RU">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="/styles/style.css"/>
+    <link rel="stylesheet" href="../styles/style.css"/>
     <link rel="icon" href="/png/logo.png"/>
     <link rel="canonical" href="https://pies.ru/account">
 </head>
@@ -70,7 +70,7 @@
 
                     <div class="account-actions" style="text-align: center;">
                         <button id="logout-btn" class="btn" style="margin-right: 20px;">Выйти</button>
-                        <a href="/index.html" class="btn">На главную</a>
+                        <a href="../index.html" class="btn">На главную</a>
                     </div>
                 </div>
 
@@ -79,7 +79,7 @@
                 </div>
 
                 <div id="not-logged-in" style="text-align: center; display: none;">
-                    <p>Вы не авторизованы. <a href="/pages/login.html">Войти</a></p>
+                    <p>Вы не авторизованы. <a href="../pages/login.html">Войти</a></p>
                 </div>
             </div>
         </div>
@@ -111,7 +111,7 @@
     </footer>
 
     <script type="module">
-        import { checkAuthState, logout } from '/js/auth-manager.js';
+        import { checkAuthState, logout } from '../js/auth-manager.js';
         import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/12.3.0/firebase-database.js";
 
         const database = getDatabase();
@@ -160,7 +160,7 @@
 
         logoutBtn.addEventListener('click', async () => {
             await logout();
-            window.location.href = '/index.html';
+            window.location.href = '../index.html';
         });
 
         loadUserData();
