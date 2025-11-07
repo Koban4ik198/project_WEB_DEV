@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Пирожки от Дяди Бори - Главная</title>
+    <meta name="robots" content="index, follow">
+    <title>Пирожки от Дяди Бори - Заказ пирогов с доставкой в Новосибирске | Домашняя выпечка</title>
+    <meta name="description" content="Закажите свежие пироги от Дяди Бори с доставкой по Новосибирску. Натуральные ингредиенты, домашний вкус, скидка 50% на первый заказ. Пирожки с мясом, капустой, картошкой.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Пирожки от Дяди Бори - Домашняя выпечка с доставкой">
+    <meta property="og:description" content="Свежие пироги по семейным рецептам. Натуральные ингредиенты, быстрая доставка в Новосибирске.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="png/logo.png">
+    <meta property="og:url" content="https://pies.ru/">
+    <meta property="og:site_name" content="Пирожки от Дяди Бори">
+    <meta property="og:locale" content="ru_RU">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles/style.css"/>
     <link rel="icon" href="png/logo.png"/>
+    <link rel="canonical" href="https://pies.ru/">
 </head>
 <body>
     <!-- Header -->
@@ -24,13 +35,16 @@
                 <li><a href="#promo-banner">Акции</a></li>
                 <li><a href="pages/about.html">О нас</a></li>
                 <li><a href="pages/feedback.html">Обратная связь</a></li>
-                <li><a href="pages/acountaud.html">Личный кабинет</a></li>
+                <li><a href="pages/acсount.html">Личный кабинет</a></li>
             </ul>
         </nav>
         <span id="user-greeting" style="color: #5a3e1b; margin-right: 10px; display: none;"></span>
         <button id="auth-btn" class="btn">Вход</button>
     </header>
 
+
+
+    
     <!-- Hero Section with Carousel -->
     <section class="hero">
         <div class="carousel">
@@ -39,21 +53,21 @@
                     <div class="slide-content">
                         <h1>Вкуснейшие пироги от Дяди Бори</h1>
                         <p>Натуральные ингредиенты, домашний вкус</p>
-                        <a href="#" class="btn">Заказать сейчас</a>
+                        <a href="menu.html" class="btn">Заказать сейчас</a>
                     </div>
                 </div>
                 <div class="carousel-slide">
                     <div class="slide-content">
                         <h1>Скидка 50% на первый заказ</h1>
                         <p>Введите промокод: ПЕРВЫЙ</p>
-                        <a href="#" class="btn">Получить скидку</a>
+                        <a href="#promo-banners" class="btn">Получить скидку</a>
                     </div>
                 </div>
                 <div class="carousel-slide">
                     <div class="slide-content">
                         <h1>Бесплатная доставка</h1>
                         <p>При заказе от 1500 рублей</p>
-                        <a href="#" class="btn">Подробнее</a>
+                        <a href="#futures" class="btn">Подробнее</a>
                     </div>
                 </div>
             </div>
@@ -114,7 +128,7 @@
     </section>
 
     <!-- Features -->
-    <section class="features" id="features">
+    <section id="futures" class="features" id="features">
         <div class="container">
             <div class="features-grid">
                 <div class="feature-card">

@@ -1,11 +1,22 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Меню - Пирожки от Дяди Бори</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <title>Меню пирогов от Дяди Бори - Цены и состав пирожков с разными начинками</title>
+    <meta name="description" content="Меню пирожков от Дяди Бори. Выберите из 20+ видов пирожков с мясом, капустой, картошкой, сладкими начинками. Цены, состав, возможность заказа онлайн в Новосибирске.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Меню пирогов - Выберите свой вкус">
+    <meta property="og:description" content="Более 20 видов пирожков с разными начинками. Натуральные ингредиенты, домашний вкус.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../png/logo.png">
+    <meta property="og:url" content="https://pies.ru/menu/">
+    <meta property="og:site_name" content="Пирожки от Дяди Бори">
+    <meta property="og:locale" content="ru_RU">
     <link rel="stylesheet" href="../styles/style.css"/>
-    <link rel="icon" href="../png/logo.png"/>
+    <link rel="icon" href="/png/logo.png"/>
+    <link rel="canonical" href="https://pies.ru/menu/">
 </head>
 <body>
     <a href="../index.html" class="btn" style="position: fixed; top: 20px; right: 20px;">Назад</a>
@@ -20,19 +31,19 @@
                 <nav>
                     <ul>
                         <li><a href="../index.html">Главная</a></li>
-                        <li><a href="menu.html" class="active">Меню</a></li>
-                        <li><a href="../index.html">Акции</a></li>
+                        <li><a href="menu.html">Меню</a></li>
+                        <li><a href="../index.html#promo-banner">Акции</a></li>
                         <li><a href="about.html">О нас</a></li>
                         <li><a href="feedback.html">Обратная связь</a></li>
+                        <li><a href="acсount.html">Личный кабинет</a></li>
             </ul>
         </nav>
-        <div class="phone">+7 (383) 227-87-00</div>
-        <div id="user-profile" style="display: none; align-items: center; gap: 10px;">
-        <i class="fas fa-user" style="color: #5a3e1b;"></i>
-        <span id="user-name" style="color: #5a3e1b; font-weight: bold;"></span>
-</div>
-<button id="auth-btn" class="btn">Вход</button>
+        <span id="user-greeting" style="color: #5a3e1b; margin-right: 10px; display: none;"></span>
+        <button id="auth-btn" class="btn">Вход</button>
     </header>
+
+
+    
 
    <!-- Menu Section -->
 <section class="menu" style="padding: 100px 20px 60px; background: #f7f1e1; min-height: 80vh;">

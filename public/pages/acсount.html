@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Личный кабинет - Пирожки от Дяди Бори</title>
+    <meta name="robots" content="index, follow">
+    <title>Личный кабинет - Пирожки от Дяди Бори | История заказов и персональные скидки</title>
+    <meta name="description" content="Личный кабинет Пирожки от Дяди Бори. Управляйте заказами, просматривайте историю покупок, сохраняйте любимые пироги. Персональные скидки и акции.">
+    <!-- Open Graph -->
+    <meta property="og:title" content="Личный кабинет - Мои заказы и скидки">
+    <meta property="og:description" content="Управляйте своими заказами и получайте персональные предложения.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="../png/logo.png">
+    <meta property="og:url" content="https://pies.ru/account/">
+    <meta property="og:site_name" content="Пирожки от Дяди Бори">
+    <meta property="og:locale" content="ru_RU">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/styles/style.css"/>
     <link rel="icon" href="/png/logo.png"/>
+    <link rel="canonical" href="https://pies.ru/account">
 </head>
 <body>
     <!-- Header -->
@@ -14,22 +25,25 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo">
-                    <img src="/png/logo.png" alt="Логотип Пирожки от Дяди Бори">
+                    <img src="../png/logo.png" alt="Логотип Пирожки от Дяди Бори" />
                     <div class="logo-text">Пирожки от Дяди Бори</div>
                 </div>
                 <nav>
                     <ul>
-                        <li><a href="/index.html">Главная</a></li>
-                        <li><a href="/pages/menu.html">Меню</a></li>
-                        <li><a href="/index.html#promo-banner">Акции</a></li>
-                        <li><a href="/index.html#about-us">О нас</a></li>
-                        <li><a href="/pages/feedback.html">Обратная связь</a></li>
-                    </ul>
-                </nav>
-                <div class="phone">+7 (383) 227-87-00</div>
-            </div>
-        </div>
+                        <li><a href="../index.html">Главная</a></li>
+                        <li><a href="menu.html" class="active">Меню</a></li>
+                        <li><a href="../index.html#promo-banner">Акции</a></li>
+                        <li><a href="about.html">О нас</a></li>
+                        <li><a href="feedback.html">Обратная связь</a></li>
+                        <li><a href="acсount.html">Личный кабинет</a></li>
+            </ul>
+        </nav>
+        <span id="user-greeting" style="color: #5a3e1b; margin-right: 10px; display: none;"></span>
+        <button id="auth-btn" class="btn">Вход</button>
     </header>
+
+
+    
 
     <!-- Account Section -->
     <section class="account-section" style="padding: 120px 0; background: #f7f1e1;">

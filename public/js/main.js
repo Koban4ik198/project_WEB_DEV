@@ -57,3 +57,5 @@ document.addEventListener('DOMContentLoaded', updateAuthUI);
 
 // И при изменении авторизации
 auth.onAuthStateChanged(updateAuthUI);
+
+
