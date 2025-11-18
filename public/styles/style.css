@@ -44,10 +44,10 @@ body {
         gap: 15px;
         flex-wrap: nowrap;
         }
-        
+
         #auth-btn {
         white-space: nowrap;
-        min-width: 80px; 
+        min-width: 80px;
         text-align: center;
         }
 
@@ -83,6 +83,36 @@ nav a {
 
         nav a:hover {
             color: #a0522d;
+        }
+
+        /* Hamburger Menu */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            background: none;
+            border: none;
+            padding: 10px;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: #8b4513;
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
         }
 
 .phone {
@@ -421,30 +451,169 @@ footer {
         /* Responsive */
         @media (max-width: 768px) {
             .header-content {
+                justify-content: space-between;
+                position: relative;
+            }
+
+            .hamburger {
+                display: flex;
+                order: -1;
+            }
+
+            .logo {
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            #nav-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: #f7f1e1;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+                display: none;
                 flex-direction: column;
-                gap: 15px;
+                padding: 20px 0;
+                z-index: 999;
+            }
+
+            #nav-menu.active {
+                display: flex;
             }
 
             nav ul {
-                gap: 15px;
-                flex-wrap: wrap;
-                justify-content: center;
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+                margin: 0;
+                padding: 0;
+            }
+
+            nav li {
+                list-style: none;
             }
 
             .hero {
-                height: 500px;
+                height: 400px;
+                margin-top: 80px;
             }
 
             .slide-content h1 {
-                font-size: 36px;
+                font-size: 28px;
+            }
+
+            .slide-content p {
+                font-size: 16px;
+            }
+
+            .promo-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .promo-item {
+                padding: 20px;
             }
 
             .promo-percent {
-                font-size: 60px;
+                font-size: 50px;
+            }
+
+            .promo-text {
+                font-size: 16px;
+            }
+
+            .code {
+                font-size: 20px;
+            }
+
+            .order-btn {
+                padding: 12px 24px;
+            }
+
+            .order-btn span {
+                font-size: 24px;
             }
 
             .features-grid {
                 grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .feature-card {
+                padding: 20px;
+            }
+
+            .feature-icon {
+                font-size: 30px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            .logo-text {
+                font-size: 20px;
+            }
+
+            .logo img {
+                width: 40px;
+                height: 40px;
+            }
+
+            .hero {
+                height: 350px;
+            }
+
+            .slide-content h1 {
+                font-size: 24px;
+            }
+
+            .slide-content p {
+                font-size: 14px;
+            }
+
+            .btn {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+
+            .promo-percent {
+                font-size: 40px;
+            }
+
+            .promo-text {
+                font-size: 14px;
+            }
+
+            .code {
+                font-size: 18px;
+            }
+
+            .order-btn span {
+                font-size: 20px;
+            }
+
+            .order-btn p {
+                font-size: 12px;
+            }
+
+            .feature-card h3 {
+                font-size: 18px;
+            }
+
+            .feature-card p {
+                font-size: 14px;
             }
         }
 

@@ -30,7 +30,7 @@ async function updateAuthUI() {
         // Пользователь не авторизован
         authBtn.textContent = 'Вход';
         authBtn.onclick = handleLogin;
-        
+
         // Безопасно работаем с элементами
         if (userGreeting) {
             userGreeting.style.display = 'none';
@@ -43,7 +43,8 @@ async function updateAuthUI() {
 
 function handleLogin(e) {
     e.preventDefault();
-    window.location.href = 'pages/login.html';
+    const isIndex = window.location.pathname.endsWith('index.html') || window.location.pathname === '/';
+    window.location.href = isIndex ? 'pages/login.html' : 'login.html';
 }
 
 async function handleLogout(e) {
@@ -52,8 +53,50 @@ async function handleLogout(e) {
     window.location.reload();
 }
 
+// Hamburger menu toggle
+function toggleHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+}
+
+// Close hamburger menu when clicking outside or on a link
+function closeHamburgerMenu() {
+    const hamburger = document.getElementById('hamburger-btn');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('#nav-menu a');
+
+    // Close when clicking on nav links
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (hamburger && navMenu) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+            }
+        });
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function(event) {
+        if (hamburger && navMenu && !hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+            hamburger.classList.remove('active');
+            navMenu.classList.remove('active');
+        }
+    });
+}
+
 // Проверяем при загрузке
-document.addEventListener('DOMContentLoaded', updateAuthUI);
+document.addEventListener('DOMContentLoaded', function() {
+    updateAuthUI();
+    toggleHamburgerMenu();
+    closeHamburgerMenu();
+});
 
 // И при изменении авторизации
 auth.onAuthStateChanged(updateAuthUI);
